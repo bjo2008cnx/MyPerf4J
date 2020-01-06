@@ -72,7 +72,7 @@ public class MetricsProcessorFactory {
             case PropertyValues.METRICS_PROCESS_TYPE_INFLUX_DB:
                 return new InfluxMethodMetricsProcessor();
             default:
-                return new LoggerMethodMetricsProcessor();
+                return new LoggerMethodStackMetricsProcessor();
         }
     }
 

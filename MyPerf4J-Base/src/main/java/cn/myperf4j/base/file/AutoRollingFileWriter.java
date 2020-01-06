@@ -47,7 +47,7 @@ public abstract class AutoRollingFileWriter {
 
             Date lastModifiedDate = new Date(targetFile.lastModified());
             if (isSameEpoch(now, lastModifiedDate)) {
-                createWriter(targetFile, true);
+                createWriter(targetFile, false);
                 return;
             }
 

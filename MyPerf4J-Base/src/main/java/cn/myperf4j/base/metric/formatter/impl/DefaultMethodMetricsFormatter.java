@@ -1,5 +1,6 @@
 package cn.myperf4j.base.metric.formatter.impl;
 
+import cn.myperf4j.base.MethodTag;
 import cn.myperf4j.base.metric.MethodMetrics;
 import cn.myperf4j.base.metric.formatter.MethodMetricsFormatter;
 import cn.myperf4j.base.util.DateFormatUtils;
@@ -33,10 +34,12 @@ public final class DefaultMethodMetricsFormatter implements MethodMetricsFormatt
                 continue;
             }
 
+            MethodTag methodTag = metrics.getMethodTag();
+
             sb.append(String.format(dataFormat,
-                    metrics.getMethodTag().getSimpleDesc(),
-                    metrics.getMethodTag().getType(),
-                    metrics.getMethodTag().getLevel(),
+                    methodTag.getFullDesc(),
+                    methodTag.getType(),
+                    methodTag.getLevel(),
                     metrics.getRPS(),
                     metrics.getAvgTime(),
                     metrics.getMinTime(),
