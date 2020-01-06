@@ -38,6 +38,9 @@ MyPerf4J 为每个应用收集数十个监控指标，所有的监控指标都�
 
     > 想知道如何实现上述效果？请先按照[快速启动](https://github.com/LinShunKang/MyPerf4J#%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8)的描述启动应用，再按照[这里](https://github.com/LinShunKang/MyPerf4J/wiki/InfluxDB_)的描述进行安装配置即可。
 
+
+=======================================================================================================================================
+
 ## 快速启动
 MyPerf4J 采用 JavaAgent 配置方式，**透明化**接入应用，对应用代码完全**没有侵入**。
 
@@ -50,8 +53,7 @@ MyPerf4J 采用 JavaAgent 配置方式，**透明化**接入应用，对应用�
 
 ### 配置
 在 JVM 启动参数里加上以下两个参数
-* -javaagent:/path/to/MyPerf4J-ASM.jar
-* -DMyPerf4JPropFile=/path/to/MyPerf4J.properties
+* -javaagent:/path/to/MyPerf4J-ASM.jar -DMyPerf4JPropFile=/path/to/MyPerf4J.properties
 
 > 形如：java -javaagent:/path/to/MyPerf4J-ASM.jar -DMyPerf4JPropFile=/path/to/MyPerf4J.properties `-jar yourApp.jar`
 
@@ -78,36 +80,3 @@ DemoDAO.getId2(long)         DynamicProxy          DAO  3274139     0.00        
 
 > MyPerf4J-ASM-${MyPerf4J-version}.jar 在 MyPerf4J-ASM/target/ 目录下
 
-## 问题
-如果您有任何问题、疑问或者建议，您可以 [提交Issue](https://github.com/LinShunKang/MyPerf4J/issues/new/choose) 或者 [发送邮件](mailto:linshunkang.chn@gmail.com) ：）
-
-注意，为了保障大家的时间，请保证您已经**完整阅读过**以下内容：
-* [提问模板](https://github.com/LinShunKang/MyPerf4J/wiki/%E6%8F%90%E9%97%AE%E6%A8%A1%E6%9D%BF)
-* [快速启动](https://github.com/LinShunKang/MyPerf4J#%E5%BF%AB%E9%80%9F%E5%90%AF%E5%8A%A8)
-* [中文文档](https://github.com/LinShunKang/MyPerf4J/wiki/Chinese-Doc)
-* [常见问题](https://github.com/LinShunKang/MyPerf4J/wiki/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98)
-
-## 已知用户
-如果您在使用 MyPerf4J，请告诉我，您的使用对我来说非常重要：[https://github.com/LinShunKang/MyPerf4J/issues/30](https://github.com/LinShunKang/MyPerf4J/issues/30)（按登记顺序排列）
-
-<div align="center">
-<img src="https://github.com/LinShunKang/Objects/blob/master/logos/Boss_300x300.png?raw=true" width="80" height="80"/>
-&nbsp;&nbsp;&nbsp;
-<img src="https://github.com/LinShunKang/Objects/blob/master/logos/Lever.jpeg?raw=true" width="240" height="80"/>
-&nbsp;&nbsp;&nbsp;
-<img src="https://github.com/LinShunKang/Objects/blob/master/logos/dianzhang_303x303.jpeg?raw=true" width="80" height="80"/>
-</div>
-
-## 项目捐赠
-如果 MyPerf4J 对您有帮助，可以使用微信扫描下面的赞赏码，请我喝杯咖啡 : )
-<div align="center">
-<img src="https://github.com/LinShunKang/Objects/blob/master/logos/WechatIMG16.jpeg?raw=true" width="260" height="260"/>
-</div>
-
-## 参考项目
-MyPerf4J 是受以下项目启发而来：
-* [Perf4J](https://github.com/perf4j/perf4j)
-* [TProfiler](https://github.com/alibaba/TProfiler)
-
-## 更多信息
-想更深入的了解 MyPerf4J？请看 [https://github.com/LinShunKang/MyPerf4J/wiki/Chinese-Doc](https://github.com/LinShunKang/MyPerf4J/wiki/Chinese-Doc)。
